@@ -6,10 +6,21 @@ def home(request):
     return render(request, "appTrakk/home.html")
 
 def usuarios(request):
-    pass
+    return render(request, "appTrakk/usuarios.html")
+
 
 def hallazgo(request):
-    pass
+    return render(request, "appTrakk/hallazgo.html")
+
 
 def feedback(request):
-    pass
+    return render(request, "appTrakk/feedback.html")
+
+def usuariosform(request):
+    return render(request, "appTrakk/usuariosform")
+
+def aghallazgo(request):
+    return render(request, "appTrakk/aghallazgo")
+
+def bhallazgo(request):
+    return render(request, "appTrakk/bhallazgo")
