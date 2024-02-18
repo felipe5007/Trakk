@@ -6,14 +6,10 @@
 
 
 {% block navegador%}
-
+<a class="btn btn-primary" href="agregar_hallazgo.html/" role="button">agregar</a>
+<button class="btn btn-primary"href="http://127.0.0.1:8000/appTrakk/hallazgo/ type="submit">Button</button>
 {% endblock navegador%}
 
 {% block contenido %}
-<form action="" metod="post">
-    <p> Hallazgo: <input type="text" name="Hallazgo" id="Hallazgo"></p>
-    <p> Descripcion: <input type="text" name="Descripcion" id="Descripcion"></p>
-    <p> Estado: <input type="text" name="Estado" id="Estado"></p>
-    <input type="sumbit" value="Enviar">
-</form>
+
 {% endblock contenido%}

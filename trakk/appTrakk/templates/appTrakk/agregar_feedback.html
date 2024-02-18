@@ -1,0 +1,11 @@
+{% extends 'appTrakk/home.html'%}
+
+{% block contenido %}
+<form action="" metod="post">
+    {% csrf_token %}
+    <p> Nombre: <input type="text" name="name" id="name"></p>
+    <p> Comentario: <input type="text" name="name" id="comentario"></p>
+    <p> Correo: <input type="text" name="name" id="email"></p>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock contenido%}

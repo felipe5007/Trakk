@@ -16,7 +16,7 @@ class Usuario(models.Model):
 class Hallazgo(models.Model):
     name = models.CharField(max_length=50)
     descripcion = models.CharField(max_length=250)
-    Estado = models.CharField(max_length=50)
+    estado = models.CharField(max_length=50)
 
     def __str__(self):
         return f"{self.name}"
