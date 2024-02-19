@@ -1,15 +1,15 @@
 {% extends 'appTrakk/home.html'%}
 
-{% block titulo %}
+{% block tituloform %}
 <h1 class="mb-5"> Agregar Hallazgo </h1>
-{%endblock titulo%}
+{%endblock tituloform%}
 
-
-{% block navegador%}
-<a class="btn btn-primary" href="agregar_hallazgo.html/" role="button">agregar</a>
-<button class="btn btn-primary"href="http://127.0.0.1:8000/appTrakk/hallazgo/ type="submit">Button</button>
-{% endblock navegador%}
-
-{% block contenido %}
-
-{% endblock contenido%}
+{% block formulario %}
+<form action="" metod="post">
+    {% csrf_token %}
+    <p> Nombre: <input type="text" name="name" id="name"></p>
+    <p> Descripcion: <input type="text" name="name" id="descripcion"></p>
+    <p> Estado: <input type="text" name="name" id="estado"></p>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock formulario%}

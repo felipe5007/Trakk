@@ -1,5 +1,15 @@
 {% extends 'appTrakk/home.html'%}
 
-{% block contenido %}
-<h1> Estoy en feedback</h1>
-{% endblock contenido%}
+{% block tituloform %}
+<h1> Agregar Feedback</h1>
+{% endblock tituloform%}
+
+{% block formulario %}
+<form action="" metod="post">
+    {% csrf_token %}
+    <p> Nombre: <input type="text" name="name" id="name"></p>
+    <p> Comentario: <input type="text" name="name" id="comentario"></p>
+    <p> Correo: <input type="text" name="name" id="email"></p>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock formulario%}

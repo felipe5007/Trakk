@@ -1,14 +1,15 @@
 {% extends 'appTrakk/home.html'%}
 
-{% block titulo %}
+{% block tituloform %}
 <h1 class="mb-5"> Agregar usuario </h1>
-{%endblock titulo%}
+{%endblock tituloform%}
 
-{% block contenido %}
+{% block formulario %}
 <form action="" metod="post">
+    {% csrf_token %}
     <p> Nombre: <input type="text" name="name" id="name"></p>
-    <p> Correo: <input type="text" name="name" id="name"></p>
-    <p> Contraseña: <input type="text" name="name" id="name"></p>
-    <input type="sumbit" value="Enviar">
+    <p> Correo: <input type="text" name="name" id="email"></p>
+    <p> Contraseña: <input type="text" name="name" id="password"></p>
+    <input type="submit" value="Enviar">
 </form>
-{% endblock contenido%}
+{% endblock formulario%}
