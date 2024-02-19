@@ -1,5 +1,25 @@
 {% extends 'appTrakk/home.html'%}
 
-{% block contenido %}
-<h1> Estoy en buscar hallazgo</h1>
-{% endblock contenido%}
+{% block tituloform %}
+<h1 class="mb-5"> Agregar Hallazgo </h1>
+{%endblock tituloform%}
+
+{%block buscar%}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+        <tr>
+    </thead>
+    <tbody>
+        {% for h in Hallazgo %}
+        <tr>
+            <td>{{ h.name }}</td>
+            <td>{{ h.descripcion }}</td>
+            <td>{{ h.estado }}</td>
+        </tr>
+    
+    </tbody>
+{%endblock buscar%}

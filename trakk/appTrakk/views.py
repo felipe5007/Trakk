@@ -35,8 +35,11 @@ def hallazgo(request):
         
     else:
         HForm = HallazgoForm()
-    return render(request, "appTrakk/hallazgo.html", {"form": HForm})
+    return render(request, "appTrakk/hallazgo.html", {"form": HForm}, )
 
+def buscar_hallazgo(request):
+        contextoF = {'hallazgo': Hallazgo.objects.all()}
+        return render(request, "appTrakk/buscar_hallazgo.html",contextoF) 
 
 #Feedbacks
 def feedback(request):
