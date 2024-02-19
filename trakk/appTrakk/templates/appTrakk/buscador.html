@@ -1,10 +1,10 @@
 {% extends 'appTrakk/home.html'%}
 
 {% block tituloform %}
-<h1 class="mb-5"> Agregar Hallazgo </h1>
+<h1 class="mb-5"> Buscar Hallazgo </h1>
 {%endblock tituloform%}
 
-{%block buscar%}
+{%block formulario%}
 <table class="table table-striped">
     <thead>
         <tr>
@@ -20,6 +20,10 @@
             <td>{{ h.descripcion }}</td>
             <td>{{ h.estado }}</td>
         </tr>
-    
+        {% endfor%}
     </tbody>
-{%endblock buscar%}
+{%endblock formulario%}
+
+{% block buscador %}
+
+{%endblock buscador%}
