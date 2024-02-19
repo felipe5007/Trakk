@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.template import Template, Context
+from .forms import *
 
 # Create your views here.
 def home(request):
@@ -7,7 +8,8 @@ def home(request):
 
 # Usuarios
 def usuarios(request):
-    return render(request, "appTrakk/usuarios.html")
+    UsuarioForm = UsuarioForm()
+    return render(request, "appTrakk/usuarios.html", {"form": UsuarioForm})
 def agregar_usuario(request):
     return render(request, "appTrakk/agregar_usuario.html")
 
@@ -18,7 +20,8 @@ def buscar_usuario(request):
 def hallazgo(request):
     return render(request, "appTrakk/hallazgo.html")
 def agregar_hallazgo(request):
-    return render(request, "appTrakk/agregar_hallazgo.html")
+    HallazgoForm = HallazgoForm()
+    return render(request, "appTrakk/agregar_hallazgo.html", {"form": HallazgoForm})
 
 def buscar_hallazgo(request):
     return render(request, "appTrakk/buscar_hallazgo.html")
@@ -28,7 +31,8 @@ def feedback(request):
     return render(request, "appTrakk/feedback.html")
 
 def agregar_feedback(request):
-    return render(request, "appTrakk/agregar_feedback.html")
+    FeedbackForm = FeedbackForm()
+    return render(request, "appTrakk/agregar_feedback.html",{"form": FeedbackForm})
 
 def buscar_feedback(request):
     return render(request, "appTrakk/buscar_feedback.html")
