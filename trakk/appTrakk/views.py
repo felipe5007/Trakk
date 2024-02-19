@@ -37,9 +37,9 @@ def hallazgo(request):
         HForm = HallazgoForm()
     return render(request, "appTrakk/hallazgo.html", {"form": HForm}, )
 
-def buscar_hallazgo(request):
+def buscador(request):
         contextoF = {'hallazgo': Hallazgo.objects.all()}
-        return render(request, "appTrakk/buscar_hallazgo.html",contextoF) 
+        return render(request, "appTrakk/buscador.html",contextoF) 
 
 #Feedbacks
 def feedback(request):

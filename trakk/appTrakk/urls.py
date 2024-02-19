@@ -8,5 +8,5 @@ urlpatterns = [
     path('feedback/', feedback, name="feedback"),
     #
     path('hallazgo/', hallazgo, name="hallazgo"),
-    path('buscarhallazgo/', buscar_hallazgo, name="buscar_hallazgo")
+    path('buscador/', buscador, name="buscador")
 ]
